@@ -100,7 +100,7 @@ custom-shader = shaders/bloom025.glsl
 #
 # This assumes you installed tmux through brew if using macos
 # command = zsh --login -c "if command -v tmux >/dev/null 2>&1; then tmux attach || tmux; else zsh; fi"
-command = /bin/zsh
+command = zsh -c "/Users/apple/github/dotfiles-latest/scripts/ghostty-startup.sh"
 
 # Horizontal window padding. This applies padding between the terminal cells
 # and the left and right window borders. The value is in points, meaning that
