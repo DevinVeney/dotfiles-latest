@@ -483,6 +483,12 @@ if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; 
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+# https://github.com/zsh-users/zsh-syntax-highlighting
+# Syntax highlighting for zsh commands
+if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # Changed from z.lua to zoxide, as it's more maintaned
 # smarter cd command, it remembers which directories you use most
 # frequently, so you can "jump" to them in just a few keystrokes.

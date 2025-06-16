@@ -12,6 +12,10 @@ source "$HOME/github/dotfiles-latest/colorscheme/active/active-colorscheme.sh"
 # Tmux prefix key
 set -g prefix C-b
 
+# Ensure tmux uses zsh as the default shell
+set -g default-shell /bin/zsh
+set -g default-command /bin/zsh
+
 # "xterm-256color" in alacritty and "screen-256color" in tmux doesnt have paste issues in neovim
 # "checkhealth" command in neovim shows no color warnings
 # set -g default-terminal "screen-256color"
@@ -325,6 +329,14 @@ unbind 6
 bind-key -r 6 run-shell "tmux neww $colorscheme_selector"
 unbind 7
 bind-key -r 7 run-shell "tmux neww $script_selector"
+
+# Launch btop in a new window with Ctrl-b + b
+unbind b
+bind-key b new-window -n "btop" "btop"
+
+# Launch btop in a vertical split with Ctrl-b + B (shift+b)
+unbind B
+bind-key B split-window -h -c "#{pane_current_path}" "btop"
 
 ###############################################################################
 
